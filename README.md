@@ -92,7 +92,9 @@ $ npm install nodemon
 "start": "nodemon index.js"
 ```
 
-# IMAGEM-1 AQUI
+<div align="center">
+  <img src="![image1](https://user-images.githubusercontent.com/105654178/234607299-1d8c5ba4-41a3-4c7e-a0b3-74591d324a4e.png)" width="100px">
+</div>
 
 3. Finally, run the following command in the project terminal:
 
