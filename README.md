@@ -93,7 +93,7 @@ $ npm install nodemon
 ```
 
 <div align="center">
-  <img src="![image1](https://github.com/AnjaClara/LABMedicine/issues/1#issue-1685153302)" width="100px">
+  <img src="![image1](https://github.com/AnjaClara/LABMedicine/issues/1#issue-1685153302)">
 </div>
 
 3. Finally, run the following command in the project terminal:
