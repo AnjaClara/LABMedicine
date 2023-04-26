@@ -34,7 +34,8 @@ Before you start, you need the following tools: a code program (example: [VSCode
 <br>
 
 1. Open your pgAdmin and create a database called **labmedicinebd**:
-# IMAGEM 25
+
+![imagem25](https://user-images.githubusercontent.com/105654178/234614284-7f015fa9-14f7-4de9-b069-6f973d5eec35.png)
 
 2. Create a folder and clone the repository into it:
 
@@ -92,9 +93,8 @@ $ npm install nodemon
 "start": "nodemon index.js"
 ```
 
-<div align="center">
-  <img src="![image1](https://user-images.githubusercontent.com/105654178/234607299-1d8c5ba4-41a3-4c7e-a0b3-74591d324a4e.png)">
-</div>
+![image1](https://user-images.githubusercontent.com/105654178/234607299-1d8c5ba4-41a3-4c7e-a0b3-74591d324a4e.png)
+
 
 3. Finally, run the following command in the project terminal:
 
@@ -112,7 +112,7 @@ Open the insomnia and put this URL everytime before you path like the image:
 ```
 http://localhost:3636
 ```
-# IMAGE - 2
+![image2](https://user-images.githubusercontent.com/105654178/234610721-a2acf6fe-f689-43b3-aa12-0148244e202e.png)
 
 ### **PATIENT**
 
@@ -124,7 +124,7 @@ http://localhost:3636/api/patients
 
 <p>To make it work as expected, you must change the request to POST and in the body select the JSON option. Then you will need to insert the record, send the request and the expected output will be like the one in the image:</p>
 
-# IMAGEM -3 
+![imagem3](https://user-images.githubusercontent.com/105654178/234611333-90dd1446-9ec9-4337-9dca-53f3df2aaf76.png)
 
 In the part of service_status, you can just rigth the options: **"WAITING_FOR_SERVICE"**, **"IN_ATTENDANCE"**, **"ATTENDED"** or **"NOT_ATTENDED"**. We will not use the total_of_service at this moment. 
 
@@ -133,15 +133,14 @@ In the part of service_status, you can just rigth the options: **"WAITING_FOR_SE
 ```
 http://localhost:3636/api/patients/:id
 ```
-# IMAGEM 4
+![Imagem4](https://user-images.githubusercontent.com/105654178/234611525-36f1019b-9020-487b-bf6e-affe4cda5417.png)
 
 3. Now the **PUT** will serve to update the service_status:
 
 ```
 http://localhost:3636/api/patients/:id/status
 ```
-# IMAGEM 5
-<br>
+![Imagem5](https://user-images.githubusercontent.com/105654178/234611743-574d346f-dfdd-4126-bdf2-b22a45f15114.png)
 
 **REMEMBER**: you can only use **"WAITING_FOR_SERVICE"**, **"IN_ATTENDANCE"**, **"ATTENDED"** or **"NOT_ATTENDED"**.
 
@@ -150,28 +149,27 @@ http://localhost:3636/api/patients/:id/status
 ```
 http://localhost:3636/api/patients/
 ```
-# IMAGEM -6 
-<br>
+![IMAGEM6](https://user-images.githubusercontent.com/105654178/234611852-12183821-6f7f-4b02-a542-46da3939740a.png)
 
 ```
 http://localhost:3636/api/patients?service_status=NOT_ATTENDED
 ```
-# IMAGEM - 7
+![IMAGEM7](https://user-images.githubusercontent.com/105654178/234612107-2fb0a901-6c96-4140-b619-1adab4939a88.png)
 
 5. It is also possible to find a specific Patient using they ID in **GET**:
 
 ```
 http://localhost:3636/api/patients/:id
 ```
-# IMAGEM 8
+![imagem8](https://user-images.githubusercontent.com/105654178/234612184-fe877ea6-c812-42e6-919f-2619f5bd746d.png)
 
 6. To delete a Patient you must select the **DELETE** request and specify the id of the registered patient.
 
 ```
 http://localhost:3636/api/patients/:id
 ```
+![imagem9](https://user-images.githubusercontent.com/105654178/234612358-e8a84348-f697-4ed9-a6c1-1f0a7c239b78.png)
 
-# IMAGEM 9
 <br>
 
 ### **DOCTOR**
@@ -183,8 +181,8 @@ http://localhost:3636/api/doctors
 <br>
 
 In this request you may or may not enter the system_state (if you want to use that, you can only use **"ACTIVE"** or **"INACTIVE"** as options), but you have to use just this options for the specialization: **"GENERAL_PRACTITIONE"**, **"ANESTHETIST"** , **"DERMATOLOGY"**, **"GYNECOLOGY"**, **"NEUROLOGY"**, **"PEDIATRICS"**, **"PSYCHIATRY"**, **"ORTHOPEDICS"**. 
-# IMAGEM 10
-<br>
+![IMAGEM10](https://user-images.githubusercontent.com/105654178/234612636-f205b128-dde7-45d3-874c-f2a47b8c18e1.png)
+
 
 **Note:** if nothing is entered in system_state, the doctor will be registered as **ACTIVE**.
 
@@ -193,37 +191,37 @@ In this request you may or may not enter the system_state (if you want to use th
 ```
 http://localhost:3636/api/doctors/:id
 ```
-# IMAGEM 11
+![imagem11](https://user-images.githubusercontent.com/105654178/234612763-b4aae357-4bef-4011-8a77-edb46eed7409.png)
 
 3. To update the doctor's **STATUS** you must use the **PUT** request, the doctor's ID and enter the system_state only with the options **"ACTIVE "** or **"INACTIVE**:
 ```
 http://localhost:3636/api/doctors/:id/status
 ```
-# IMAGEM 12
+![imagem12](https://user-images.githubusercontent.com/105654178/234612852-4e85d2ee-b6d1-4838-baba-af4a2ae4a9cf.png)
 
 4. It's possible find all your doctors or just the doctor with the desired system_state using the query parameters. To do this, you have to use **GET** and use one of the options below:
 ```
 http://localhost:3636/api/doctors/
 ```
-# IMAGEM - 13
+![IMAGEM13](https://user-images.githubusercontent.com/105654178/234612953-e4f9e43c-cac3-4352-9d87-68109a5c42ed.png)
 <br>
 
 ```
 http://localhost:3636/api/doctors?system_state=INACTIVE
 ```
-# IMAGEM - 14
+![imagem14](https://user-images.githubusercontent.com/105654178/234613152-b5d82233-94b7-4e25-a976-1f0764aa1053.png)
 
 5. To find a specific doctor, you can use **GET** and the doctor's ID:
 ```
 http://localhost:3636/api/doctors/:id
 ```
-# IMAGEM - 15
+![imagem15](https://user-images.githubusercontent.com/105654178/234613242-a0a6ffed-a67d-4870-80be-06b3a35393e2.png)
 
 6. To delete some doctor, you can use the **DELETE** request and the doctor's ID:
 ```
 http://localhost:3636/api/doctors/:id
 ```
-# IMAGEM - 16
+![imagem16](https://user-images.githubusercontent.com/105654178/234613450-08be445f-27ea-4138-8838-1e138d1d7e35.png)
 <br>
 
 ### **NURCE**
@@ -232,32 +230,32 @@ http://localhost:3636/api/doctors/:id
 ```
 http://localhost:3636/api/nurces
 ```
-# IMAGEM - 17
+![imagem17](https://user-images.githubusercontent.com/105654178/234613525-e477d439-eb41-4f4d-84fe-c1343a447373.png)
 
 2. To update the nurce's data you must use the **PUT** request and the nurce's ID:
 
 ```
 http://localhost:3636/api/nurces/:id
 ```
-# IMAGEM 18
+![imagem18](https://user-images.githubusercontent.com/105654178/234613629-f7d37bdf-4cc8-4684-a3d0-ed43d6fce1d0.png)
 
 3. To find all the nurces, you can use **GET**:
 ```
 http://localhost:3636/api/nurces
 ```
-# IMAGEM - 19
+![imagem19](https://user-images.githubusercontent.com/105654178/234613760-00acf8ad-ae56-4ed7-bcaa-e643e69031ef.png)
 
 4. To find a specific nurce, you can use **GET** and the nurces's ID:
 ```
 http://localhost:3636/api/nurces/:id
 ```
-# IMAGEM - 20
+![imagem20](https://user-images.githubusercontent.com/105654178/234613854-16428b5c-af2e-4941-bcac-a4c40ff060d7.png)
 
 5. To delete some nurce, you can use the **DELETE** request and the nurce's ID:
 ```
 http://localhost:3636/api/nurces/:id
 ```
-# IMAGEM - 21
+![imagem21](https://user-images.githubusercontent.com/105654178/234613905-9a0b8f8a-9491-4a53-ab31-e2fcb239cdaa.png)
 <br>
 
 ### **ATTENDANCE**
@@ -265,11 +263,16 @@ http://localhost:3636/api/nurces/:id
 ```
 http://localhost:3636/api/attendances
 ```
-# IMAGEM - 22
+![IMAGEM22](https://user-images.githubusercontent.com/105654178/234613992-f3531e23-f04e-4937-aebd-a2073f80d4ec.png)
 
 **NOTE:** In the example the doctor and patient id 6 was chosen, now see that the doctor's total_appointments and the patient's total_of_service have changed, as has the patient's service_status:
-# imagem 23
-# imagem 24
+
+![imagem23](https://user-images.githubusercontent.com/105654178/234614063-7dadf76f-f6bb-48ec-9611-78ae7d98c1fd.png)
+
+<br>
+
+![imagem24](https://user-images.githubusercontent.com/105654178/234614159-2a5b83ed-ec7f-41f5-8d00-84f99c4fd1a6.png)
+
 <br>
 
 ## 👩🏻‍💻 Technologies 
